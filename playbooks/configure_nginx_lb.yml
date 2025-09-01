@@ -2,6 +2,8 @@
 - name: Configure servers
   hosts: load_balancer
   remote_user: "{{ ansible_user }}"
+  vars_files:
+    - ./vars.yaml
   become: false
   tasks:
     - name: debug test
